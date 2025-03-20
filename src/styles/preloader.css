@@ -1,0 +1,100 @@
+.greeting__section {
+   display: flex;
+   justify-content: center;
+
+   top: 0;
+
+   height: 100vh;
+}
+
+.cat__image {
+   position: relative;
+
+   width: 40%;
+
+   margin-left: 10%;
+
+   -webkit-filter: drop-shadow(0px 0px 200px #c865b17b);
+   filter: drop-shadow(0px 0px 200px #c865b17b);
+}
+
+.greeting-text {
+   width: 50%;
+
+   height: fit-content;
+
+   margin: auto;
+
+   opacity: 0;
+}
+
+.greeting-text.first-load {
+   animation: var(--animation__show) 3s 1;
+   animation-fill-mode: forwards;
+   animation-delay: 1s;
+}
+
+.greeting-text.reload {
+   opacity: 1;
+}
+
+.notice {
+   font-size: 30px;
+   padding-top: 10px;
+}
+
+.owi__button {
+   position: relative;
+
+   text-decoration: none;
+   font-weight: 600;
+   font-size: 30px;
+
+   color: var(--main__text__color);
+
+   padding: 0 1.5%;
+   padding-bottom: 1%;
+   padding-top: 0.5%;
+
+   border: 2px solid;
+   border-radius: 20px;
+   border-image-slice: 1;
+
+   cursor: pointer;
+
+   transition: 0.3s ease;
+}
+
+.owi__button:hover {
+   box-shadow: 0px 0px 10px 2px #d6d6d641;
+   border-radius: 20px;
+
+   --bg-size: 400%;
+   background: linear-gradient(90deg, #6717cd, #2871fa, #6717cd) 0 0 /
+      var(--bg-size) 100%;
+
+   transition: 0.3s ease;
+
+   color: transparent;
+   border-color: #e0e0d9c7;
+   -webkit-background-clip: text;
+   background-clip: text;
+}
+
+.owi__button:active {
+   background: none;
+
+   color: var(--main__text__color);
+   background-color: #6d6571c6;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+   .owi__button {
+      animation: move-bg 20s linear infinite;
+   }
+   @keyframes move-bg {
+      to {
+         background-position: var(--bg-size) 0;
+      }
+   }
+}

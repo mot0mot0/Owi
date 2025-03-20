@@ -1,0 +1,134 @@
+.account__button {
+   display: grid;
+   position: fixed;
+
+   top: 25px;
+   right: 25px;
+
+   z-index: 100;
+
+   color: var(--main__text__color);
+
+   opacity: 0;
+   transition: 0.2s;
+   animation: var(--animation__show) 1s 1;
+   animation-fill-mode: forwards;
+}
+
+.account__button.active {
+   transform: scale(1.1);
+}
+
+.account__data {
+   position: fixed;
+
+   display: flex;
+   flex-direction: column;
+
+   opacity: 0;
+
+   pointer-events: none;
+
+   z-index: 99;
+
+   top: 15px;
+   right: 15px;
+
+   padding: 15px;
+
+   text-align: center;
+
+   width: fit-content;
+   height: fit-content;
+
+   border-radius: 10px;
+
+   backdrop-filter: blur(40px);
+
+   background: #8c849542;
+
+   font-size: 20px;
+
+   box-shadow: 0 0 20px 10px var(--container__shadow__color);
+}
+
+.account__button.active ~ .account__data {
+   animation: var(--animation__show) 0.2s 1;
+   animation-fill-mode: forwards;
+   pointer-events: all;
+}
+
+.account__button.disactive ~ .account__data {
+   animation: var(--animation__hide) 0.2s 1;
+   animation-fill-mode: forwards;
+   pointer-events: none;
+}
+
+.person-name {
+   padding: 0 50px 5px 50px;
+}
+
+.account__link {
+   margin-top: 8px;
+   padding: 2px 5px;
+   padding-bottom: 3px;
+
+   height: 2rem;
+
+   color: var(--main__text__color);
+   border: 1px solid #8b76a067;
+   border-radius: 8px;
+
+   text-decoration: none;
+   transition: 0.3s;
+}
+
+.account__link:hover {
+   color: var(--link__hover__color);
+   border-color: #8b76a0;
+}
+
+.hr-line {
+   margin: 5px 0;
+   padding: 0;
+   height: 0;
+   border: none;
+   border-top: 1px solid #8b76a067;
+}
+
+.home-transition__section {
+   display: grid;
+   position: fixed;
+
+   top: 0;
+   left: 0;
+
+   height: 100vh;
+   width: 100vw;
+
+   z-index: 101;
+
+   opacity: 0;
+   pointer-events: none;
+}
+
+.home-transition__section.active {
+   opacity: 1;
+
+   pointer-events: all;
+
+   animation: screen-blur 1.5s 1;
+   animation-fill-mode: forwards;
+}
+
+@keyframes screen-blur {
+   0% {
+      background-color: transparent;
+      backdrop-filter: blur(0px);
+      filter: brightness(1);
+   }
+   100% {
+      backdrop-filter: blur(50px);
+      filter: brightness(0);
+   }
+}

@@ -1,0 +1,82 @@
+.download__container {
+   display: flex;
+   flex-direction: column;
+
+   position: relative;
+
+   height: 55vh;
+   width: 70vw;
+
+   margin: 10vh auto;
+   padding: 2.5%;
+
+   justify-content: center;
+   align-items: center;
+
+   border-radius: 20px;
+
+   box-shadow: 0 0 20px 1rem var(--container__shadow__color);
+   background-color: var(--container__background__color);
+
+   transform: scale(0.8);
+}
+
+.download__header__text {
+   margin: 0 auto;
+}
+
+.content__stack {
+   display: flex;
+   flex-direction: column;
+
+   margin: auto;
+
+   row-gap: 4vh;
+
+   width: 50%;
+}
+
+.os-choose__stack {
+   display: flex;
+   height: fit-content;
+   justify-content: space-between;
+}
+
+.button-label {
+   margin: auto 0;
+}
+
+.download__button {
+   display: flex;
+
+   width: 180px;
+   min-width: fit-content;
+   height: 55px;
+
+   padding: 1.5% 3%;
+   padding-bottom: 2%;
+
+   border-radius: 30px;
+   border: 2px solid;
+   border-color: var(--main__text__color);
+
+   text-decoration: none;
+   transition: 0.2s ease-out;
+   background-color: transparent;
+}
+
+.button-text {
+   color: var(--main__text__color);
+   font-weight: 400;
+   font-size: 25px;
+   margin: auto;
+}
+
+.download__button:hover {
+   background-color: var(--button__hover__background__color);
+   border-radius: 22px;
+}
+
+.download__button:active {
+   background-color: var(--button__active__background__color);
+}

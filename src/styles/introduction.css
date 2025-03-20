@@ -1,0 +1,10 @@
+.introduction-text__stack {
+   border-radius: 10px;
+   padding: 1%;
+
+   width: 55%;
+}
+
+.introduction-slideshow__stack {
+   width: 40%;
+}

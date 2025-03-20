@@ -1,0 +1,43 @@
+.scroll__bar {
+   display: grid;
+
+   position: fixed;
+
+   top: calc(100vh / 2 - 65px);
+   right: 20px;
+
+   width: fit-content;
+
+   z-index: 100;
+   cursor: default;
+   font-size: 12px;
+
+   row-gap: 20px;
+
+   animation: var(--animation__show) 1s 1;
+   animation-fill-mode: forwards;
+}
+
+.circle {
+   width: 10px;
+   height: 10px;
+
+   margin: 0;
+
+   border-radius: 5px;
+   background: var(--main__text__color);
+   transition: 0.5s ease-out;
+}
+
+.circle.active {
+   transform: scale(1.5);
+}
+
+.circle.active:hover {
+   transform: scale(1.5);
+}
+
+.circle:hover {
+   cursor: pointer;
+   transform: scale(1.2);
+}

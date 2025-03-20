@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap");
+
+*,
+*:before,
+*:after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --main__text__color: #efefde;
+   --header__text__background__color: #cecece2d;
+   --footer__text__color: #1a1a1a;
+
+   --container__shadow__color: #0000003f;
+   --container__background__color: #7a738010;
+
+   --button__hover__background__color: #b6b6b652;
+   --button__active__background__color: #0e031553;
+
+   --link__hover__color: #7654cc;
+
+   --input__backround__color: #ffffffd3;
+   --input__text__color: #212529;
+   --input__focus__background: #ffffff;
+
+   --animation__show: show;
+   --animation__hide: hide;
+
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+}
+
+body {
+   position: relative;
+
+   background: -webkit-linear-gradient(
+      120deg,
+      #470862,
+      #360c58,
+      #250851,
+      #0b0337
+   );
+   background: linear-gradient(120deg, #470862, #360c58, #250851, #0b0337);
+   background-size: 300% 170%;
+
+   animation: gradient 20s ease infinite;
+
+   color: var(--main__text__color);
+   font-family: "Raleway", sans-serif;
+   font-weight: 400;
+   font-size: 25px;
+}
+
+h1 {
+   font-weight: 600;
+   font-size: 68px;
+}
+
+h2 {
+   font-weight: 600;
+   font-size: 30px;
+
+   padding: 0.5rem;
+   margin-bottom: 0.5rem;
+
+   border-radius: 1rem;
+
+   background-color: var(--header__text__background__color);
+
+   width: fit-content;
+}
+
+input[type="text"] {
+   font-family: inherit;
+   line-height: inherit;
+   margin: 0;
+}
+
+.screen__section {
+   height: 100vh;
+   width: 100vw;
+}
+
+.container {
+   position: relative;
+   display: flex;
+
+   top: 12vh;
+
+   height: 75vh;
+   width: 70vw;
+
+   margin: auto auto;
+   padding: 2.5%;
+
+   justify-content: center;
+   align-items: center;
+
+   border-radius: 20px;
+
+   box-shadow: 0 0 20px 1rem var(--container__shadow__color);
+   background-color: var(--container__background__color);
+
+   transform: scale(0.7);
+}
+
+@keyframes show {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+@keyframes hide {
+   0% {
+      opacity: 1;
+   }
+   100% {
+      opacity: 0;
+   }
+}
+
+@keyframes gradient {
+   0% {
+      background-position: 0% 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0% 50%;
+   }
+}
+
+::-webkit-scrollbar {
+   display: none;
+}
+
+.container-scale {
+   animation: containerScale 0.8s ease 1 forwards;
+}
+
+@keyframes containerScale {
+   0% {
+   }
+   100% {
+      transform: scale(1);
+   }
+}
